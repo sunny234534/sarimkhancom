@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sign up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background-image: url(https://i.ebayimg.com/images/g/zV4AAOSwIMJkSA-e/s-l1200.webp);
+    background-size: 930px;
+    background-repeat: none;
+    
+  }
+  .main{
+    width: 350px;
+    height: 500px;
+    background: red;
+    overflow: hidden;
+    background-color: #21c512;
+    border-radius: 20px;
+    box-shadow: 5px 20px 50px #5b0dda;
+  }
+  #chk{
+    display: none;
+  }
+  .signup{
+    position: relative;
+    width:100%;
+    height: 100%;
+  }
+  label{
+    color: #0a0a0a;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+  }
+  input{
+    width: 60%;
+    height: 10px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+  button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #573b8a;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+  }
+  button:hover{
+    background: #6d44b8;
+  }
+  .login{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+  }
+  .login label{
+    color: #573b8a;
+    transform: scale(.6);
+  }
+  
+  #chk:checked ~ .login{
+    transform: translateY(-500px);
+  }
+  #chk:checked ~ .login label{
+    transform: scale(1);	
+  }
+  #chk:checked ~ .signup label{
+    transform: scale(.6);
+  }
+  
+</style>
+  
+</head>
+<body>
+  <form id="form" action="post">
+    <div class="form-group">
+       <label for="exampleInputEmail1">Email address</label>
+       <input type="email"  
+              id="email" 
+              class="form-control"  
+              aria-describedby="emailHelp" >
+        <small id="emailHelp" 
+                class="form-text text-muted">
+             
+        </small>
+    </div>
+    <div class="form-group">
+       <label for="exampleInputPassword1">Password</label>
+       <input type="password" id="password" class="form-control" >
+    </div>
+    <button type="submit" 
+             class="btn btn-outline-success btn-lg shadow" 
+             onClick="auth(event)">Submit</button>
+ </form>
+ <script>
+    function auth(event) {
+          event.preventDefault();
+
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+
+          if (email === "admin@gmail.com" && password === "user") {
+               window.location.replace("/paf.html");
+          } else {
+              alert("Invalid information");
+              return;
+          }
+    }
+ </script> 
+</body>
+</html>

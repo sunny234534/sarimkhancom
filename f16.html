@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F-16</title>
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  height: 50;
+  width: 50;
+}
+
+img {
+  vertical-align: middle;
+  height: 50;
+  width: 50;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  height: 50;
+  width: 50;
+  box-sizing: initial;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 50;
+  width: 50;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.f1{
+    text-align: center;
+    background-color:red;
+}
+.f-16{
+    text-align: center;
+    font-size: xx-large;
+}
+p{
+    font-size:larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+<body>
+
+<h2 class="f1">F-16 Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://pbs.twimg.com/media/FcFXUkvWAAA0qf1?format=jpg&name=large" style="width:100%" >
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://preview.redd.it/8ogzcw2v7v291.jpg?width=640&crop=smart&auto=webp&s=8afa0efae7e7a1b2b34c997bda1ab90b8305e55c" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://quwa.org/wp-content/uploads/2015/10/PAF-F-16C-01.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://w0.peakpx.com/wallpaper/512/148/HD-wallpaper-general-dynamics-f-16-fighting-falcon-f-16b-pakistan-air-force-american-fighter-military-aircraft-pakistan.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjGRSjtTPjdu9fuz-lt4gIdV_hVwMS3U2Mjz5ASiDxqgENRcG41Ca4pK8W9KsqjaK0yifh9TI-6ol5F4j6MaR7Nqyh6wb3uFRP5cI8ZFnPexCPJ2OQsftYFwrgrLLRUVxI3KTyVxmldurm/s1600/MSF_5546.JPG" style="width:100%" height="100">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-26718,resizemode-75,msid-94219817/news/new-updates/upgraded-f-16-fighters-for-pakistan-big-worry-for-indian-air-force/file-photo-fighter-jet-f-16-performs-to-commemorate-pakistan-air-forces-operation-swift-retort-during-an-air-show-in-karachi.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://pbs.twimg.com/media/FcFXUkvWAAA0qf1?format=jpg&name=large" style="width:100%"  onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://preview.redd.it/8ogzcw2v7v291.jpg?width=640&crop=smart&auto=webp&s=8afa0efae7e7a1b2b34c997bda1ab90b8305e55c" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://quwa.org/wp-content/uploads/2015/10/PAF-F-16C-01.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://w0.peakpx.com/wallpaper/512/148/HD-wallpaper-general-dynamics-f-16-fighting-falcon-f-16b-pakistan-air-force-american-fighter-military-aircraft-pakistan.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjGRSjtTPjdu9fuz-lt4gIdV_hVwMS3U2Mjz5ASiDxqgENRcG41Ca4pK8W9KsqjaK0yifh9TI-6ol5F4j6MaR7Nqyh6wb3uFRP5cI8ZFnPexCPJ2OQsftYFwrgrLLRUVxI3KTyVxmldurm/s1600/MSF_5546.JPG" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://img.etimg.com/thumb/width-640,height-480,imgsize-26718,resizemode-75,msid-94219817/news/new-updates/upgraded-f-16-fighters-for-pakistan-big-worry-for-indian-air-force/file-photo-fighter-jet-f-16-performs-to-commemorate-pakistan-air-forces-operation-swift-retort-during-an-air-show-in-karachi.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+<h1 class="f-16">F-16 INFORMATION</h1>
+<h1>INTRODUCTION</h1>
+<p>
+    Pakistan has ordered a total of 111 F-16A/B aircraft. Of these, 71 were embargoed by the US due to Pakistan's nuclear weapons program. Of these 71, 28 were actually built but were flown directly to the AMARC at Davis-Monthan AFB for storage.
+
+Over the years, various plans were conceived for these 28 aircraft: Pakistan wanted to get the aircraft or their money back; they were offered to various nations, none of which were interested; ultimately, the US Navy and USAF entered them into service as aggressor aircraft.
+
+After Pakistan's help in the war on terror, the US lifted the embargo. In 2005, Pakistan requested 24 new Block 50/52 F-16C/Ds (with option for as much as 55 aircraft). Ultimately an order for 18 F-16s was placed with an option on another 18.
+</p>
+<img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201904/pakistan_f-16_1_0.jpeg?VersionId=6XWw9FLtYUKfJeCpj2O6EKmX.7PTcTa1" height="120">
+<br>
+<h1>Peace Gate I</h1>
+<p>In December 1981, the government of Pakistan signed a letter of agreement for the purchase of up to 40 F-16A/B (28 F-16A and 12 F-16B) fighters for the Pakistan Fiza'ya (Pakistan Air Force, or PAF). The deal would be split into two batches, one of 6 aircraft and the other of 34. The first aircraft were accepted at Fort Worth in October of 1982, and the first F-16, flown by Squadron Leader Shahid Javed, landed in Pakistan at Sargodha Air Base on January 15th, 1983 as part of a package of 6 'Peace Gate I' aircraft (2 A's and 4 B's).</p>
+<h1>Peace Gate II</h1>
+<p>The remaining 34 aircraft were delivered under Peace Gate II. The Pakistani F-16A/B's are all Block 15 aircraft, the final version of the F-16A/B production run, and are powered by the Pratt & Whitney F100-PW-200 turbofan. All 40 'Peace Gate I & II' aircraft were delivered between 1983 and 1987. By 1997, 8 aircraft of the initial Peace Gate I & II order have been written off in various mishaps, hence 32 remain in service and despite the embargo, caused by the Pakistan-specific Pressler Amendment (see below), are being fully supported by commercial contracts.
+
+    The F-16s were assigned USAF serial numbers for record-keeping purposes, and carry a three-digit PAF serial number on their noses; the F-16A's being assigned numbers in sequence beginning with 701, and the F-16B's being assigned numbers beginning with 601. The two digit prefix preceding these numbers is the year of delivery of these aircraft. The PAF Falcons have a slightly altered color scheme, with the dark gray area covering most of the wings and the aft part of the horizontal tailplanes and carry toned-down markings: the national flag (normally a white moon and star on green field) on the tail and roundels on the upper wing surface.</p>
+<h1>Peace Gate III
+</h1>
+<p>Seven years after the first order, in December of 1988, Pakistan ordered 11 additional F-16A/B Block 15 OCU (Operational Capability Upgrade) aircraft (6 Alpha and 5 Bravo models) under the Peace Gate III program. These aircraft were purchased as attrition replacements and fully paid for, but are still awaiting delivery in the Arizona Desert. The reason for this is that Pakistan got involved in a controversy with the United States over its suspected nuclear weapons capability. Intelligence information reaching US authorities indicated that Pakistan was actively working on a nuclear bomb, had received a design for a bomb from China, had tested a nuclear trigger and was actively producing weapons-grade uranium. Furthermore, the F-16A's of no 9 and 11 squadrons at Sargodha AB have allegedly been modified to carry and deliver a Pakistani nuclear weapon. In addition, Pakistan has steadfastly refused to sign the Nuclear Non-Proliferation Treaty.
+
+    As a result, in accordance to the Pressler amendment to the Foreign Assistance Act, which forbids military aid to any nation possessing a nuclear explosive device, the United States government announced on October 6th, 1990 that it had embargoed further arms deliveries to Pakistan. The 11 Peace Gate III aircraft were consequently stored at AMARC (Aircraft Maintenance and Regeneration Center) at Davis-Monthan AFB, Arizona, also known as the Boneyard. There, they were put in 'Flyable Hold' for 5 years, during which time 85% of each aircraft's fuel system was preserved with JP-9, and each aircraft had its engine run once every 45 days. This resulted in the curious situation that most of those aircraft now have more engine run time than air time, the latter being only 6 hours. This low air-time figure, plus the fact that these aircraft are the most modern F-16A/B's built, is the main reason why countries interested in second-hand F-16s first look at the Pakistani airframes.</p>
+    <h1></h1>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
